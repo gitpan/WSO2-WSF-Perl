@@ -1,0 +1,25 @@
+
+            Web Services Framework (Perl extension) - WSF/Perl
+	    --------------------------------------------------
+
+What it is?
+-----------
+
+WSF/Perl is Perl language bindings to WSO2 WSF/C.
+
+Installation
+------------
+
+perl Makefile.PL
+make
+make install
+
+You need to have Apache Axis2/C or WSO2 WSF/C installed in order to compile
+and use this Perl module.
+
+If you have installed Axis2/C or WSF/C on non-standard folders you can specify
+them in AXIS2_LIB_PATH and AXIS2_INC_PATH,
+
+perl Makefile.PL AXIS2_LIB_PATH=/your/axis2/lib AXIS2_INC_PATH=/your/axis2/include/axis2-1.1
+make
+make install
