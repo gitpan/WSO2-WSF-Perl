@@ -1,25 +1,48 @@
+WSO2 WSF/Perl version 1.00
+=====================
 
-            Web Services Framework (Perl extension) - WSF/Perl
-	    --------------------------------------------------
+This module provide the Perl interface to WSO2 WSF/C which is a Web services
+framework written in C to support WS-* functionality.
 
-What it is?
------------
+In order to compile this module you have to have WSO2 WSF/C installed on your
+computer.  You can get it from here [1] 
+Note: The current release of WSO2 WSF/C (1.1.0) have some linking problems
+in it's modules.  These modules have not linked the engine so you'll get an
+undefined symbol from perl.  You could overcome this either by linking the
+engine yourself or get the fixed package [2].
 
-WSF/Perl is Perl language bindings to WSO2 WSF/C.
+[1] http://wso2.org/projects/wsf/c
+[2] http://ww2.wso2.org/~chintana/wso2-wsf-c-src-1.1.0.tar.gz
 
-Installation
-------------
+INSTALLATION
 
-perl Makefile.PL
-make
-make install
+To install this module type the following:
 
-You need to have Apache Axis2/C or WSO2 WSF/C installed in order to compile
-and use this Perl module.
+   perl Makefile.PL
+   make
+   make install
 
-If you have installed Axis2/C or WSF/C on non-standard folders you can specify
-them in AXIS2_LIB_PATH and AXIS2_INC_PATH,
+If you have installed Axis2/C or WSF/C to a non standard folder give the
+include path and library path as follows:
 
-perl Makefile.PL AXIS2_LIB_PATH=/your/axis2/lib AXIS2_INC_PATH=/your/axis2/include/axis2-1.1
-make
-make install
+   perl Makefile.PL AXIS2_INC_PATH=/your/axis2/include/axis2-1.1 AXIS2_LIB_PATH=/your/axis2/lib
+   make
+   make install
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2007 by WSO2
+
+Licensed under the Apache License, Version 2.0 (the "License");             
+you may not use this file except in compliance with the License.            
+You may obtain a copy of the License at                                     
+                                                                            
+      http://www.apache.org/licenses/LICENSE-2.0                             
+                                                                            
+Unless required by applicable law or agreed to in writing, software         
+distributed under the License is distributed on an "AS IS" BASIS,           
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    
+See the License for the specific language governing permissions and         
+limitations under the License.     
+
+

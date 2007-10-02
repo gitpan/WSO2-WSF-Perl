@@ -460,7 +460,8 @@ after creating the client.
 =item axis2c_home
 
 This is a mandatory argument that should contain the absolute URL of the
-folder you installed Axis2/C or WSF/C.
+folder you installed Axis2/C or WSF/C.  You can specify this in WSClient or
+when you create a WSMessage.
 
 =item useSOAP
 

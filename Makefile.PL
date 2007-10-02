@@ -19,9 +19,10 @@ foreach( @ARGV ) {
 
 @ARGV = @replacement_args;
 
-$libs = '-laxutil -laxis2_minizip -lperl -laxis2_parser -laxis2_libxml2 -laxis2_axiom -laxis2_engine -laxis2_http_common -laxis2_http_sender -laxis2_http_receiver';
 
-$libs .= " -L$axis2_libpath" if( defined( $axis2_libpath ) );
+$libs = "-L$axis2_libpath " if( defined( $axis2_libpath ) );
+
+$libs .= '-laxutil -laxis2_minizip -lperl -laxis2_parser -laxis2_libxml2 -laxis2_axiom -laxis2_engine -laxis2_http_common -laxis2_http_sender -laxis2_http_receiver';
 
 @options;
 

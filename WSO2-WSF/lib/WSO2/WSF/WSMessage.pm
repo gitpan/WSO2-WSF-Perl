@@ -58,7 +58,8 @@ create a WSClient object.
 =item axis2c_home
 
 This is a mandatory options that contain the absolute folder of your Axis2/C
-or WSF/C installation.
+or WSF/C installation.  You can specify this in WSMessage or in the WSClient
+constructor.
 
 =item payload
 

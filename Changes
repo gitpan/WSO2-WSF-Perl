@@ -1,0 +1,5 @@
+Revision history for Perl extension WSO2::WSF.
+
+1.0.0  Tue Oct 02 14:30:02 2007
+	- Initial release of WSO2::WSF
+		- Client only support for WS-Addressing and REST
