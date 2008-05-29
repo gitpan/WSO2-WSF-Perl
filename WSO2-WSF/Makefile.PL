@@ -8,5 +8,5 @@ WriteMakefile(
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
     (ABSTRACT_FROM    => 'lib/WSO2/WSF.pm', # retrieve abstract from module
-    AUTHOR            => 'Chintana Wilamuna <chintana@wso2.com>') : ()),
+    AUTHOR            => 'WSO2 WSF/Perl Team') : ()),
 );

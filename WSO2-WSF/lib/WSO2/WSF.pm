@@ -1,5 +1,19 @@
 package WSO2::WSF;
 
+# Copyright 2005,2006 WSO2, Inc. http://wso2.com
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 use 5.008008;
 use strict;
 use warnings;
@@ -25,13 +39,18 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '1.0.0';
+our $VERSION = '0.01';
 
 
 # Preloaded methods go here.
 
 use WSO2::WSF::C;
 use WSO2::WSF::WSClient;
+use WSO2::WSF::WSMessage;
+use WSO2::WSF::WSSecurityToken;
+use WSO2::WSF::WSFault;
+use WSO2::WSF::WSHeader;
+use WSO2::WSF::WSPolicy;
 
 1;
 __END__
@@ -55,22 +74,22 @@ http://wso2.org/projects/wsf/perl
 
 =head1 AUTHOR
 
-Chintana Wilamuna <chintana@wso2.com>
+WSO2 WSF/Perl Team
 
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2007 by WSO2
 
-Licensed under the Apache License, Version 2.0 (the "License");             
-you may not use this file except in compliance with the License.            
-You may obtain a copy of the License at                                     
-                                                                            
-      http://www.apache.org/licenses/LICENSE-2.0                             
-                                                                            
-Unless required by applicable law or agreed to in writing, software         
-distributed under the License is distributed on an "AS IS" BASIS,           
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    
-See the License for the specific language governing permissions and         
-limitations under the License.     
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 =cut

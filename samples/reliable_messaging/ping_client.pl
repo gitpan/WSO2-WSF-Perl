@@ -15,21 +15,25 @@
 
 use WSO2::WSF;
 
-# This samples demonstrate sending a simple message to a service and getting a reply back.
-# Assumes WSF/PHP is installed and all the samples can be accessed from http://localhost/samples/
+# This assumes WSF/C is installed and axis2_http_server is listening on port 8585
 
 my $payload =<<E;
-<ns1:echoString xmlns:ns1="http://ws.apache.org/axis2/c/samples">
-  <text>Hello World!</text>
-</ns1:echoString>
+<ns1:ping xmlns:ns1="http://tempuri.org/">
+  <ns1:Text>ping1</ns1:Text>
+</ns1:ping>
 E
 
-my $client = new WSO2::WSF::WSClient(
-    { 'to'          => 'http://localhost/samples/echo_service.php',
-      'log_file' => '/tmp/thislogfile',
-      'log_level' => 4
+my $msg = new WSO2::WSF::WSMessage(
+    { 'to'      => 'http://127.0.0.1:8585/axis2/services/RMSampleService',
+      'action'  => 'http://php.axis2.org/samples/pingString',
+      'payload' => $payload
     } );
 
-my $response = $client->request( { 'payload' => $payload } );
+my $client = new WSO2::WSF::WSClient(
+    { 'reliable' => 'TRUE',
+      'useWSA'   => 'TRUE'
+    } );
 
-print $response->{str};
+$client->send_message( $msg );
+
+sleep(10);
